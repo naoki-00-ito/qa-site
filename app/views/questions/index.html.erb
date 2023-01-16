@@ -13,7 +13,14 @@
       <td class="p-table__data"><%= question.name %></td>
       <td class="p-table__data"><%= question.content %></td>
       <td class="p-table__data">
-      <div class="c-btn"><%= link_to 'show', question_path(question) %></div>
+        <div class="c-btn">
+          <%= link_to 'show', question_path(question) %>
+        </div>
+      </td>
+      <td class="p-table__data">
+        <div class="c-btn">
+          <%= link_to 'edit', edit_question_path(question) %>
+        </div>
       </td>
     </tr>
   <% end %>
