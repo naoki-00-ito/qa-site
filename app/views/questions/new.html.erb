@@ -2,6 +2,14 @@
 
 <div class="p-form">
   <%= form_with model: @question do |form| %>
+  <% if @question.errors.any? %>
+    <ul class="p-error">
+      <% @question.errors.full_messages.each do |message| %>
+        <li class="p-error__item"><%= message %></li>
+      <% end %>
+    </ul>
+  <% end %>
+
     <div class="p-form__item">
       <%= form.label :title %><br>
       <%= form.text_field :title %>
