@@ -1,0 +1,20 @@
+<h1 class="c-ttl">Questions</h1>
+<table class="p-table">
+  <tr class="p-table__row">
+    <th class="p-table__head">ID</th>
+    <th class="p-table__head">Title</th>
+    <th class="p-table__head">Name</th>
+    <th class="p-table__head">Content</th>
+  </tr>
+  <% @questions.each do |question| %>
+    <tr class="p-table__row">
+      <td class="p-table__data"><%= question.id %></td>
+      <td class="p-table__data"><%= question.title %></td>
+      <td class="p-table__data"><%= question.name %></td>
+      <td class="p-table__data"><%= question.content %></td>
+      <td class="p-table__data">
+      <div class="c-btn"><%= link_to 'show', question_path(question) %></div>
+      </td>
+    </tr>
+  <% end %>
+</table>
