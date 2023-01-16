@@ -22,6 +22,11 @@
           <%= link_to 'edit', edit_question_path(question) %>
         </div>
       </td>
+      <td class="p-table__data">
+        <div class="c-btn">
+          <%= link_to 'destroy', question_path(question), data: {turbo_method: 'delete', turbo_confirm: 'Are you sure?'}  %>
+        </div>
+      </td>
     </tr>
   <% end %>
 </table>
