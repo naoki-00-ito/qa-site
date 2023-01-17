@@ -18,8 +18,8 @@
 </div>
 
 <h2 class="c-ttl">Answers</h2>
-<% @question.answers.each do |answer| %>
-  <div class="p-answers">
+<div class="p-answers">
+  <% @question.answers.each do |answer| %>
     <p class="p-answer">
       Name:<br>
       <%= answer.name %>
@@ -28,8 +28,8 @@
       Content:<br>
       <%= answer.content %>
     </p>
-  </div>
-<% end %>
+  <% end %>
+</div>
 
 <h2 class="c-ttl">Add a answer</h2>
 <div class="p-form">
