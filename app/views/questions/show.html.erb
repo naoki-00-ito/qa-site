@@ -17,6 +17,20 @@
   </p>
 </div>
 
+<h2 class="c-ttl">Answers</h2>
+<% @question.answers.each do |answer| %>
+  <div class="p-answers">
+    <p class="p-answer">
+      Name:<br>
+      <%= answer.name %>
+    </p>
+    <p class="p-answer">
+      Content:<br>
+      <%= answer.content %>
+    </p>
+  </div>
+<% end %>
+
 <h2 class="c-ttl">Add a answer</h2>
 <div class="p-form">
   <%= form_with model: [@question, @question.answers.build] do |form| %>
